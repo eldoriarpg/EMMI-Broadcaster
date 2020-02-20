@@ -26,7 +26,8 @@ public class EmmiBroadcaster extends JavaPlugin {
 
     public void startBroadcasters() {
         BukkitScheduler s = this.getServer().getScheduler();
-
+        Random randomGenerator = new Random();
+        
         List<Map<String, Object>> l = (List<Map<String, Object>>) this.getBroadcastConfig().getList("messages");
 
         for (Map<String, Object> o : l) {
@@ -35,7 +36,6 @@ public class EmmiBroadcaster extends JavaPlugin {
                 for (Player p : this.getServer().getOnlinePlayers()) {
                     if (p.hasPermission((String)o.get("permission"))) {
                         List<String> messages = (List<String>) o.get("messages");
-                        Random randomGenerator = new Random();
                         String broadcast = messages.get(randomGenerator.nextInt(messages.size()));
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "tellraw " + p.getName() + " " + JsonConverter.convert(broadcast));
                     }
