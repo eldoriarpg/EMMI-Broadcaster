@@ -1,0 +1,11 @@
+name: emmi-broadcaster
+version: 1.0.0
+author: "Adwirawien@Eldoria"
+main: de.eldoria.emmibroadcaster.EmmiBroadcaster
+api-version: "1.13"
+website: eldoria.de
+commands:
+  broadcaster:
+    description: Main command
+  test:
+    description: test command

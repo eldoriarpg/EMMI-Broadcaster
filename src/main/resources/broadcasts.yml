@@ -1,0 +1,6 @@
+messages:
+  - messages:
+    - "[b]This is a test[/b] don't panic"
+    - "[c=4][b]This is not a test[/b] PANIC"
+    interval: 0.2
+    permission: "broadcaster.permission"
